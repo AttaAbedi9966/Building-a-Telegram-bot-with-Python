@@ -16,7 +16,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 
 
-    await update.message.reply_text("سلام به ربات تست آیولرن خوش آمدید.")
+    await update.message.reply_text("سلام به ربات تست خوش آمدید.")
     await context.bot.send_photo(chat_id=update.effective_chat.id,photo=open('1.jpg','rb'),caption='✅تصویر مورد نظر شما ارسال شد')
 
     await context.bot.send_voice(chat_id=update.effective_chat.id,voice=open('voice1.ogg','rb'),caption='ویس تقدیم شما')
@@ -75,7 +75,7 @@ async def voice(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 
 
-application = ApplicationBuilder().token('6688724703:AAGOph9JhiCnezaK4as7Mkbr9Y-MS5DgOB4').build()
+application = ApplicationBuilder().token('your token').build()
 start_handler = CommandHandler('start' , start)
 application.add_handler(start_handler)
 start_handler = CommandHandler('test' , test)
